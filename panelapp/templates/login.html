@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Login Page</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0;
+}
+
+form{
+    height: 520px;
+    width: 370px;
+    background-color: rgba(255, 253, 253, 0.904);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 50px 35px;
+}
+
+    
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #0a0a0a;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h4{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+
+.com{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 7px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #0c0b0b;
+}
+.button1{
+    margin-top: 10px;
+    height: 10%;
+    width: 100%;
+    background-color: #445da1;
+    color: #dedceb;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input {
+    border: 1px solid #dbd4d4; 
+
+}
+.button2{
+    height: 10%;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #d5d9e6;
+    color: #3926b8;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.checkme{
+    font-size: 13px;
+}
+.checkme1{
+    font-size: 14px;
+    text-align: center;
+}
+.lin{
+    color: rgb(108, 108, 228); 
+    text-decoration: none; 
+        
+}
+.lin1{
+    margin-left: 176px;
+    font-size: 12px;
+    color: rgb(108, 108, 228); 
+    text-decoration: none;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="post">
+        <h4>Welcome to TRIPTA!</h4>
+        <h4>please sign-in to your account</h4>
+        {% csrf_token %} 
+       
+        
+        <input type="text" placeholder="Enter Email address" class="com" id="email" name="email">
+        <br>
+        <a href=""class="lin1">Forgot password?</a>
+        <input type="password" placeholder="Password" class="com" id="password" name="pass">
+        <br>
+        
+        <input type="checkbox" id="remember" name="remember">
+        
+        <label for="remember" class="checkme">Check me out</label>
+        <button type="submit" class="button1">Sign In</button>
+        <button type="submit" class="button2">Facebook</button>
+        <br><br>
+        
+        <p class="checkme1">Not registered ?<a class="lin" href="{% url 'signup' %}" >Create an account</a></p>
+    </form>
+</body>
+</html>
