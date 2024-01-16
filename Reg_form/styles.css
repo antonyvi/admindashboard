@@ -1,0 +1,89 @@
+.registration_form{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    /* margin:auto; */
+    height:85vh;
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: auto;
+}
+label{
+    margin-bottom: 10px;
+}
+input{
+    margin-bottom: 10px;
+}
+
+
+
+
+.tab {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+
+
+
+#sec1{
+    background-color: rgb(57, 2, 255); 
+    color: rgb(255, 255, 255); 
+}
+
+/* Add this CSS to highlight visited steps */
+.btn.visited {
+    background-color: rgb(57, 2, 255);
+    color: #fff;
+}
+
+.hr.visited {
+    background-color: #ff0303 !important;
+
+}
+
+/* Add this CSS to style the active step */
+.btn.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hr.active {
+    background-color: #ff0000 !important;
+}
+
+
+.pagination { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+}
+.pagination .number{
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 50%;
+    background: #00aaee;
+    color: #fff;
+    font-size: 15px;
+}
+.pagination .bar {
+    width: 50px;
+    height: 4px;
+    background: #00acee;
+    border-radius: 5px;
+}
+.pagination .active ~ div {
+    background: #ddd;
+    color: #111;
+}
+
